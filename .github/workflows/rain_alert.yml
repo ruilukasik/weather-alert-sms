@@ -2,7 +2,7 @@ name: Rain Alert
 
 on:
   schedule:
-    - cron: '56 12 * * *'  # Adjust based on your timezone
+    - cron: '00 13 * * *'  # Adjust based on your timezone
   
   push:  # Also run when you push code
     branches:
