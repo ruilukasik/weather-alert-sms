@@ -7,7 +7,7 @@ on:
     # Winter (WET, UTC+0): use '30 13 * * *'
     # Summer (WEST, UTC+1): use '30 12 * * *'
     # Using 12:30 UTC as compromise (works reasonably for both seasons)
-    - cron: '46 12 * * *'
+    - cron: '48 13 * * *'
 
   # Optional: Allow manual trigger for testing
   workflow_dispatch:
