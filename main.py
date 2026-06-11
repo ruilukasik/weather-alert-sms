@@ -1,6 +1,8 @@
+# Rain alert script - Updated
 import requests
 import os
 from twilio.rest import Client
+# ... rest of your code
 
 OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
 api_key = os.environ.get("OWM_API_KEY")
