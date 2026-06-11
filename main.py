@@ -10,8 +10,8 @@ account_sid = os.environ.get("ACCOUNT_SID")
 auth_token = os.environ.get("AUTH_TOKEN")
 
 weather_params = {
-    "lat": 33.518589,
-    "lon": -86.810356,
+    "lat": 38.722252,
+    "lon": -9.139337,
     "appid": api_key,
     "cnt": 4,
 }
