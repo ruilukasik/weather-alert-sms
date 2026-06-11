@@ -30,8 +30,8 @@ if will_rain:
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body="It's going to rain today. Remember to bring an ☔.",
-        from_="+17252378952",
-        to="+351963693017",
+        from_="whatsapp:+14155238886",
+        to="whatsapp:+351963693017",
     )
     print(message.status)
 else:
