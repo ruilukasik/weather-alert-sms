@@ -2,7 +2,7 @@ name: rain_alert
 
 on:
   schedule:
-    - cron: '46 9 * * *'  # Daily at 10:46 AM Lisbon time
+    - cron: '32 10 * * *'  # Daily at 10:46 AM Lisbon time
   workflow_dispatch:
 
 jobs:
