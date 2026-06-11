@@ -2,34 +2,28 @@ name: Rain Alert
 
 on:
   schedule:
-    # 13:30 Portuguese time
-    # GitHub Actions uses UTC, so:
-    # Winter (WET, UTC+0): use '30 13 * * *'
-    # Summer (WEST, UTC+1): use '30 12 * * *'
-    # Using 12:30 UTC as compromise (works reasonably for both seasons)
-    - cron: '48 13 * * *'
-
-  # Optional: Allow manual trigger for testing
-  workflow_dispatch:
+    - cron: '56 12 * * *'  # Adjust based on your timezone
+  
+  push:  # Also run when you push code
+    branches:
+      - main
+  
+  workflow_dispatch:  # Manual trigger
 
 jobs:
   rain_alert:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-
+        uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'  # Adjust if needed
-
+          python-version: '3.11'
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests twilio
-
       - name: Run rain alert
         env:
           OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
