@@ -35,4 +35,10 @@ if will_rain:
     )
     print(message.status)
 else:
-    print("No rain detected, message not sent")
+    client = Client(account_sid, auth_token)
+    message = client.messages.create(
+        body="Good news! It's not going to rain today. 🌤️",
+        from_="whatsapp:+14155238886",
+        to="whatsapp:+351963693017",
+    )
+    print(message.status)
